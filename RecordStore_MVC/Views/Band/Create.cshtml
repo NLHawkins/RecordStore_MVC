@@ -1,0 +1,24 @@
+﻿@model RecordStore_MVC.Models.Band
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Band"))
+{
+    <p>
+        @Html.TextBox("Name", null, new { @class = "form-control", placeholder = "Band Name" })
+    </p>
+    <p>
+        @Html.TextBox("Hometown", null, new { @class = "form-control", placeholder = "Band Hometown" })
+    </p>
+    <p>
+        <input type="submit" class="btn btn-default" value="Create Band" />
+    </p>
+}
+
+    
+
+        
