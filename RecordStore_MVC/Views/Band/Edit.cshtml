@@ -1,7 +1,38 @@
-﻿
+﻿@model RecordStore_MVC.Models.Band
 @{
     ViewBag.Title = "Edit";
 }
 
 <h2>Edit</h2>
+    <h4>Album</h4>
+    <hr />
+    
+   @using (Html.BeginForm("Edit", "Band"))
+   {
+    <p>
+        @Html.TextBox("Name", null, new { @class = "form-control"})
+    </p>
+    <p>
+        @Html.TextBox("id", null, new { @class = "form-control hidden"})
+    </p>
+    <p>
+        @Html.TextBox("Hometown", null, new { @class = "form-control"})
+    </p>
+    <p>
+        <input type="submit" class="btn btn-default" value="Edit Band" />
+    </p>
+    <p>
+        @Html.ActionLink("Cancel", "Index")
+    </p>
+    
+   }
 
+
+   
+            
+        
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

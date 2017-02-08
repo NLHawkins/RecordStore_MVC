@@ -1,15 +1,25 @@
-﻿
+﻿@model RecordStore_MVC.Models.Band
 @{
     ViewBag.Title = "Details";
 }
-
+<h4>Band</h4>
 <h2>Details</h2>
 
-<div class="row">
-    <div>
-       @ViewBag.band.Name;
-    </div>
-    <div>
-        @ViewBag.band.Hometown;
-    </div>
-</div>
+<table>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.Name)
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            -from-
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.Hometown)
+        </td>
+    </tr>
+</table>
